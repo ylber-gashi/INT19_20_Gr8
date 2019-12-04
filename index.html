@@ -2,11 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width", initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+    .footer{
+        background-color:darkslategrey;
+        height: 400px;
+        position: relative;
+    }
+    .footer .footer-bottom{
+        text-align: left;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        padding: 10px;
+        width: 50%;
+    }
+    .footer .footer-content{
+        border: 1px solid red;
+        height: 350px;
+        display: flex;
+    }
+    .footer .footer-content .footer-section{
+        flex:1;
+        padding:0px 20px 20px 20px;
+
+    }
+    .footer .footer-content h3{
+        color: white;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .footer .footer-content .links ul a{
+        color:goldenrod;
+        display: block;
+        font-family: 'Times New Roman', Times, serif;
+        margin-bottom: 10px;
+        font-size: 1.2;
+    }
+    .footer .footer-content .links ul a:hover{
+        color:white;
+        margin-left: 15px;
+        transition: all .3s;
+    }
+
+    </style>
 </head>
 <body>
-    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section company">
+                <h3>Company Details</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores autem numquam corporis odit.</p>
+                <div class="contact">
+                    <p>Company Name<br>Street Name<br>Town<br>Postcode<br></p>
+                    <p>Phone: 4165485861<br>Email: info@internet.com</p>
+                
+                </div>
+            
+            </div>
+            <div class="footer-section latest">
+                <h3>Latest Blogposts</h3>
+                <div>
+                    <img src="Img/164.jpg" height="48px" width="48px" align='left'>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores autem 20 February 2020</p>
+                </div><hr>
+                <div>
+                    <img src="Img/164.jpg" height="48px" width="48px" align='left'>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores autem 20 February 2020</p>
+                </div><hr>
+                <div>
+                    <img src="Img/164.jpg" height="48px" width="48px" align='left'>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores autem 20 February 2020</p>
+                </div><hr>
+            </div>
+             
+            <div class="footer-section links">
+                <h3> Quick links</h3>           
+                <ul class="list">
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Helasfdasdfa</a></li>
+                    <li><a href="#">Privafssfay</a></li>
+                    <li><a href="#">AbosaffsasfUs</a></li>
+                    <li><a href="#">Coasfdfsadf</a></li>
+                </ul></div>
+            
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <form>
+                <input type="name" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <textarea type="message" placeholder="Message"></textarea> <br>
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </form>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; Copyright Reserved 2013 @ domain name - all rights served 
+        </div>
+    <footer>
 </body>
 </html>
