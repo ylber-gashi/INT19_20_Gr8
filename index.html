@@ -97,21 +97,26 @@
         margin-top: 250px;
     }
     //the end of slideshow styling
-    .footer{
-        background-color:darkslategrey;
+   .footer{
+        background-color: #1c1c1c;
         height: 400px;
         position: relative;
     }
+    
     .footer .footer-bottom{
+        border-top: 1px solid #303030;
         text-align: left;
         position: absolute;
-        bottom: 0px;
         left: 0px;
         padding: 10px;
-        width: 50%;
+        width: 98.45%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 12px;
+        line-height: 19px;
+        color: #666666;
     }
     .footer .footer-content{
-        border: 1px solid red;
+        border: 1px solid #000000;
         height: 350px;
         display: flex;
     }
@@ -120,21 +125,88 @@
         padding:0px 20px 20px 20px;
 
     }
-    .footer .footer-content h3{
+    .footer .footer-content h4{
+        font-size: 12px;
+        line-height: 14px;
         color: white;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-family:Georgia, 'Times New Roman', Times, serif;
     }
-    .footer .footer-content .links ul a{
-        color:goldenrod;
+    .footer .footer-content p{
+        font-size: 12px;
+        line-height: 19px;
+        color: #666666;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    .footer .footer-content .latest p{
         display: block;
-        font-family: 'Times New Roman', Times, serif;
-        margin-bottom: 10px;
-        font-size: 1.2;
+        border-bottom: 1px #232323;
+        font-size: 12px;
+        line-height: 14px;
+        color: #666666;
+        font-family: "Georgia";
+    }
+    .footer .footer-content .latest br{
+        font-size: 10px;
+        line-height: 12px;
+        color: #666666;
+        font-family: "Georgia";
+    }
+    .footer .footer-content img{
+        float: left;
+    }
+
+    .footer .footer-content .links ul a{
+        border-bottom: 1px solid #232323;
+        color:#2aa2d4;
+        display: block;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 12px;
+        line-height: 28px;
+
     }
     .footer .footer-content .links ul a:hover{
         color:white;
+        list-style: none;
         margin-left: 15px;
         transition: all .3s;
+    }
+    input{
+        width: 225px;
+        height: 31px;
+        border-radius: 7px;
+        background-color: #232323;
+        font-size: 13px;
+        line-height: 21px;
+        color: #666666;
+        font-family: "Georgia";
+    }
+    input[type=submit]{
+        font-size: 13px;
+        line-height: 21px;
+        color: #ffffff;
+        font-family: "Georgia";
+        width: 76px;
+        height: 31px;
+        border-radius: 7px;
+        background-color: #2aa2d4;
+    }
+    textarea{
+        width: 225px;
+        height: 110px;
+        border-radius: 7px;
+        background-color: #232323;
+        font-size: 13px;
+        line-height: 21px;
+        color: #666666;
+        font-family: "Georgia";
+    }
+    .footer .footer-content .links ul li{
+        list-style: none;
+    }
+    .footer .footer-content .links ul li:before{
+        content: '\00BB';
+        color:#666666;
+        
     }
     </style>
     <script>
@@ -236,7 +308,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section company">
-                <h3>Company Details</h3>
+                <h4>Company Details</h4>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores autem numquam corporis odit.</p>
                 <div class="contact">
                     <p>Company Name<br>Street Name<br>Town<br>Postcode<br></p>
@@ -246,23 +318,24 @@
             
             </div>
             <div class="footer-section latest">
-                <h3>Latest Blogposts</h3>
+                <h4>Latest Blogposts</h4>
                 <div>
-                    <img src="Img/164.jpg" height="48px" width="48px" align='left'>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores autem 20 February 2020</p>
-                </div><hr>
+                    <img src="Img/164.jpg" height="48px" width="48px">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores autem <br> 20 February 2020</p>
+
+                </div>
                 <div>
-                    <img src="Img/164.jpg" height="48px" width="48px" align='left'>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores autem 20 February 2020</p>
-                </div><hr>
+                    <img src="Img/164.jpg" height="48px" width="48px">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores autem<br> 20 February 2020</p>
+                </div>
                 <div>
-                    <img src="Img/164.jpg" height="48px" width="48px" align='left'>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores autem 20 February 2020</p>
-                </div><hr>
+                    <img src="Img/164.jpg" height="48px" width="48px">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores autem<br> 20 February 2020</p>
+                </div>
             </div>
              
             <div class="footer-section links">
-                <h3> Quick links</h3>           
+                <h4> Quick links</h4>           
                 <ul class="list">
                     <li><a href="#">Help & Support</a></li>
                     <li><a href="#">Privacy Policy</a></li>
@@ -271,12 +344,12 @@
                     <li><a href="#">Helasfdasdfa</a></li>
                     <li><a href="#">Privafssfay</a></li>
                     <li><a href="#">AbosaffsasfUs</a></li>
-                    <li><a href="#">Coasfdfsadf</a></li>
+                    <li><a href="#">Chhasfdfsadf</a></li>
                 </ul></div>
             
         <div class="footer-section contact">
-            <h3>Contact Us</h3>
-            <form>
+            <h4>Contact Us</h4>
+            <form class="forma" >
                 <input type="name" placeholder="Name">
                 <input type="email" placeholder="Email">
                 <textarea type="message" placeholder="Message"></textarea> <br>
