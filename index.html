@@ -96,7 +96,46 @@
         margin-left: 610px;
         margin-top: 250px;
     }
-    //the end of slideshow styling
+    /*the end of slideshow styling */
+    /*the begin of body styling */
+    section{
+            width:80%;
+            margin-left:10%;
+        }
+        .section_article{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 1em;
+
+        }
+        /*me n-th chill e kom ba veq sa me e dallu qysh po vendosen elementet*/
+        .section_article >article:nth-child(odd){
+            background-color: grey;
+        }
+        .section_article >article:nth-child(even){
+            background-color: darkkhaki;
+        }
+        .artikujt{
+            display:grid;
+            grid-template-columns: 30% 70%;
+            justify-items: left;
+            font-size: 16px;
+            line-height: 22px;
+            color: #333333;
+            font-family: "Georgia";
+        }
+        .fotoja{
+            padding-left:15px;
+            padding-top:25px;
+            width: 60px;
+            height: 60px;
+        }
+        .artikujt .tekstiArtikujt h4{
+            color: #2aa2d4;
+        }
+    /*the end of body styling */
+        
+        
    .footer{
         background-color: #1c1c1c;
         height: 400px;
@@ -329,6 +368,36 @@
             </div>
         </div>
     </div>
+    <section class="section_article">
+        <article class="artikujt">
+            <img src="photo.png" class="fotoja">
+            <div class="tekstiArtikujt">
+                <h4>Lorem ipsum.</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, tempore?</p>
+            </div>  
+        </article>
+        <article class="artikujt">
+            <img src="photo.png" class="fotoja">
+            <div class="tekstiArtikujt">
+                <h4>Lorem ipsum.</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, tempore?</p>
+            </div>
+        </article>
+        <article class="artikujt">
+            <img src="photo.png" class="fotoja">
+            <div class="tekstiArtikujt">
+                <h4>Lorem ipsum.</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, tempore?</p>
+            </div>
+        </article>
+        <article class="artikujt">
+            <img src="photo.png" class="fotoja">
+            <div class="tekstiArtikujt">
+                <h4>Lorem ipsum.</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, tempore?</p>
+            </div>
+        </article>
+    </section>
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section company">
