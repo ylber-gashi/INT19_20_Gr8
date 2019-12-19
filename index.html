@@ -7,6 +7,123 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Document</title>
     <style>
+        *{
+  margin: 0;
+  padding: 0;
+}
+body
+{
+    width: 100%;
+}
+#first_bar
+{
+    margin: 0;
+    padding: 0 10%;
+    height: 40px;
+    top: 1;
+    position: sticky;
+    background-color:#52a8df;
+    overflow-wrap :auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+#first_bar ul {
+    display: flex;
+    list-style: none;   
+    align-items: center; 
+}
+#first_bar ul a{
+    padding: 0.75rem;
+    color: white;
+    text-decoration: none;
+}
+.images
+{
+    margin-top: 5px;
+    margin-left:8px;
+}
+
+/* logoja */ 
+#logo_place
+{
+    padding: 0 10%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    background-color: tomato;
+
+}
+
+.logo
+{
+    padding: 4rem;
+    text-align: center;
+    flex: 1;
+}
+.logo.first-child
+{
+    flex: 2;
+}
+#navbar
+{
+  margin: 0;
+  padding: 0 25%;
+  background-color:#333;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+
+.container {
+    margin: 0;
+    padding: 0 10%;
+    max-width: 100%;
+    overflow: 0;
+    column-gap: 10px;
+    column-rule: 50px outset #333;
+    -moz-column-gap: 5px;
+  }
+ 
+  
+  #navbar a {
+    display: block;
+    color: #fff;
+    text-decoration-style: none;
+    padding: 10px 15px;
+    font-size: large;
+    margin-top: 5px;
+  }
+  
+  #navbar ul {
+    list-style: none;
+    float: left;
+  }
+  
+  #navbar ul li {
+    float: left;
+    color: #fff;
+    overflow: auto;
+  }
+  
+  #navbar ul li a {
+    display: block;
+    margin-right: 15px ;
+    border-right: 1px solid black;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+  }
+  #navbar ul li:last-child a
+{
+  border-right: none;
+}
+  
+  #navbar ul li a:hover, 
+  #navbar ul li a.current {
+    border-bottom: 3px solid aqua;
+  }
+  
       /*the begin of slide shoow styling*/
      .slider {
         overflow: hidden;
@@ -332,6 +449,41 @@
     </script>
 </head>
 <body>
+    <header>
+        <div id="first_bar">
+            <div id="elementet_img">
+                <a href="https://www.linkedin.com/" target="_blank"><img class="images"  src="./images/logos/linkedin.png"></a>
+                <a href="https://twitter.com/" target="_blank"><img class="images" src="./images/logos/twitter.png"></a>
+                <a href="https://www.pinterest.com/" target="_blank"><img class="images" src="./images/logos/pinterest.png"></a>
+                <a href="https://www.google.com/" target="_blank"><img class="images" src="./images/logos/googleplus.png"></a>
+                <a href="https://www.facebook.com/  " target="_blank"><img class="images" src="./images/logos/wifi.png"></a>
+
+            </div>
+            <ul>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+        <div id="logo_place">
+            <div class="logo"> LOGO HERE !!!!! </div>
+            <div class="logo">
+                <input type="text" >
+                <button type="search">Search</button>
+             </div>
+        </div>
+            <nav id="navbar">
+                <div class="container">
+                    <ul>
+                    <li><a class="current" href="Home Page.html">Home</a></li>
+                    <li><a href="tech.html">Tech</a></li>
+                    <li><a href="video_games.html">Video Games</a></li>
+                    <li><a href="video_games.html">Reviews</a></li>
+                    <li><a href="video_games.html">Science</a></li>                  
+                    <li id="aboutUs"><a href="AboutUs.html">About Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+    </header>
     <div class="slider_wrapper">
         <div class="slider">
             <div class="arrow next"></div>
