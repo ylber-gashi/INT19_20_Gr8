@@ -1,8 +1,3 @@
-
-        *{
-  margin: 0;
-  padding: 0;
-}
 body
 {
     width: 100%;
@@ -273,7 +268,7 @@ body
         color: #666666;
         font-family:Georgia, 'Times New Roman', Times, serif;
     }
-    span {
+    .footer .footer-section span {
         font-size: 10px;
         line-height: 12px;
         color: #666666;
@@ -300,15 +295,15 @@ body
     }
     .footer .footer-content .links ul {
         display: block;
-        
+        padding: 0;
     }
     .footer .footer-content .links ul a{
-        padding-bottom: 0;
         border-bottom: 1px solid #232323;        
         color:#2aa2d4;
         text-decoration: none;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 12px;
+        line-height: 30px;
     }
     .footer .footer-content .links ul a:hover{
         color:white;
@@ -316,7 +311,7 @@ body
         margin-left: 15px;
         transition: all .3s;
     }
-    .hapesira{
+    .forma .hapesira{
         border: 0px;
         margin-bottom: 10px;
         width: 225px;
