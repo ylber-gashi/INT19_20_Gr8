@@ -1,0 +1,317 @@
+       
+body
+{
+    width: 100%;
+}
+#first_bar
+{
+    margin: 0;
+    padding: 0 10%;
+    height: 40px;
+    top: 1;
+    position: sticky;
+    background-color:#52a8df;
+    overflow-wrap :auto;
+    display: flex;
+    justify-content: space-between;
+}
+#first_bar ul {
+    display: flex;
+    list-style: none;   
+    align-items: center; 
+}
+#first_bar ul a{
+    padding: 0.75rem;
+    color: white;
+    text-decoration: none;
+}
+.images
+{
+    margin-top: 5px;
+    margin-left:8px;
+}
+/* logoja */ 
+#logo_place
+{
+    padding: 0 10%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    background-color: tomato;
+}
+.logo
+{
+    padding: 4rem;
+    text-align: center;
+    flex: 1;
+}
+.logo.first-child
+{
+    flex: 2;
+}
+#navbar
+{
+  margin: 0;
+  padding: 0 25%;
+  background-color:#333;
+  border-radius: 5px;
+  overflow: auto;
+}
+.container {
+    margin: 0;
+    padding: 0 10%;
+    max-width: 100%;
+    overflow: 0;
+    column-gap: 10px;
+    column-rule: 50px outset #333;
+    -moz-column-gap: 5px;
+  }
+ 
+  
+  #navbar a {
+    display: block;
+    color: #fff;
+    text-decoration-style: none;
+    padding: 10px 15px;
+    font-size: large;
+    margin-top: 5px;
+  }
+  
+  #navbar ul {
+    list-style: none;
+    float: left;
+  }
+  
+  #navbar ul li {
+    float: left;
+    color: #fff;
+    overflow: auto;
+  }
+  
+  #navbar ul li a {
+    display: block;
+    margin-right: 15px ;
+    border-right: 1px solid black;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+  }
+  #navbar ul li:last-child a
+{
+  border-right: none;
+}
+  
+  #navbar ul li a:hover, 
+  #navbar ul li a.current {
+    border-bottom: 3px solid aqua;
+  }
+   
+        
+   .footer{
+        background-color: #1c1c1c;
+        height: 400px;
+        position: relative;
+        padding: 0 10%;
+    }
+    
+    .footer .footer-bottom{
+        
+        text-align: left;
+        border-top: 1px solid #303030;
+        padding: 0 10%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 12px;
+        line-height: 40px;
+        color: #666666;
+    }
+    .footer .footer-content{
+        border-bottom: 1px solid #000000;
+        height: 350px;
+        display: flex;
+    }
+    .footer .footer-content .footer-section{
+        flex:1;
+        padding:0px 20px 20px 20px;
+    }
+    .footer .footer-content h4{
+        font-size: 12px;
+        line-height: 14px;
+        color: white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    .footer .footer-content p{
+        font-size: 12px;
+        line-height: 19px;
+        color: #666666;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    .footer .footer-section span {
+        font-size: 10px;
+        line-height: 12px;
+        color: #666666;
+        font-family: "Georgia";
+    }
+    .footer .footer-content .latest p{
+        display: block;
+        margin-bottom: 30px;
+        border-bottom: 1px #232323;
+        font-size: 12px;
+        line-height: 14px;
+        color: #666666;
+        font-family: "Georgia";
+    }
+    .footer .footer-content .latest br{
+        font-size: 10px;
+        line-height: 12px;
+        color: #666666;
+        font-family: "Georgia";
+    }
+    .footer .footer-content img{
+        float: left;
+        margin-right: 10px;
+    }
+    .footer .footer-content .links ul {
+        display: block;
+        padding: 0;
+        
+    }
+    .footer .footer-content .links ul a{
+        border-bottom: 1px solid #232323;        
+        color:#2aa2d4;
+        text-decoration: none;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 12px;
+        line-height: 30px;
+    }
+    .footer .footer-content .links ul a:hover{
+        color:white;
+        list-style: none;
+        margin-left: 15px;
+        transition: all .3s;
+    }
+    .forma .hapesira{
+        border: 0px;
+        margin-bottom: 10px;
+        width: 225px;
+        height: 31px;
+        border-radius: 7px;
+        background-color: #232323;
+        font-size: 13px;
+        line-height: 21px;
+        color: #666666;
+        font-family: "Georgia";
+    }
+    input[type=submit]{
+        border: 0px;
+        font-size: 13px;
+        line-height: 21px;
+        color: #ffffff;
+        font-family: "Georgia";
+        width: 76px;
+        height: 31px;
+        border-radius: 7px;
+        background-color: #2aa2d4;
+    }
+    textarea{
+        border: 0px;
+        width: 225px;
+        height: 110px;
+        border-radius: 7px;
+        background-color: #232323;
+        font-size: 13px;
+        line-height: 21px;
+        color: #666666;
+        font-family: "Georgia";
+    }
+    .footer .footer-content .links ul li{
+        list-style: none;
+    }
+    .footer .footer-content .links ul li:before{
+        content: '\00BB';
+        color:#666666;
+    }
+    .kryesorja{
+        background-color: #f3f3f3;
+    }
+
+    .body{
+        width: 70%;
+        height: 100%;
+        margin-left:14%;
+        margin-right:14%;
+        display: grid;
+        grid-template-columns:75% 25%;
+        grid-column-gap: 15px;
+            
+    }
+    .artikulli{ 
+        background-color: #ffffff;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .artikulli span{
+        color:#4b4b4b;
+        font:monospace;
+        margin:7px 9px 0px 0px;
+        padding: 3px 10px;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 22px;
+        float:left;
+        min-height: 30px;
+        min-width: 30px;
+        }
+    .tjerat{
+        padding: 50px 5px;
+        background-color: #ffffff;
+        color: #ffffff;
+        font-family: monospace;
+    }
+    .tjerat p{
+        margin: 5px 0;
+    }
+        
+    #fotojaartik{
+        padding: 0 20px;
+        width:85%;
+        height:auto;
+    }
+    .body .artikulli h1{
+        padding:10px 20px;
+        font-size: 30px;
+        font-family: monospace;
+    }
+    .body .artikulli p{
+        color: #222222;
+        font-family: monospace;
+        font-size: 17px;
+        margin: 5px 0;
+        padding: 20px;
+        border-radius: 10px;
+        line-height: 25px;
+    }
+    .bg-secondary {
+        margin: 10px 0;
+        background-color: coral;
+        color: #fff;
+    }
+    .btn {
+        display: inline-block;
+        border: none;
+        background-color: darkslategray;
+        color: #fff;
+        padding: 0.5rem 1.5rem;
+    }
+    .btn-block {
+        display: block;
+        width: auto;
+        text-align: center;
+    }
+          
+    .btn:hover {
+        opacity: 0.9;
+    }
+
