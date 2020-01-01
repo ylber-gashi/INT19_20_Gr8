@@ -246,7 +246,7 @@ body
     }
     .artikulli{ 
         background-color: #ffffff;
-        padding: 50px;
+        padding: 0px 50px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -280,7 +280,7 @@ body
         height:auto;
     }
     .body .artikulli h1{
-        padding:10px 20px;
+        padding:0px 20px;
         font-size: 30px;
         font-family: monospace;
     }
