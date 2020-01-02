@@ -1,11 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
+  
   body
   {
       width: 100%;
+      margin: 0;
+      padding: 0;
+      
   }
   #first_bar
   {
@@ -43,7 +43,7 @@
       height: 150px;
       display: flex;
       flex-direction: row;
-      background-color: tomato;
+      background-color: whitesmoke;
   
   }
   
@@ -53,21 +53,35 @@
       text-align: center;
       flex: 1;
   }
+  #final_Logo
+  {
+    height: 150px;
+    padding: 2px 20px;
+  }
+  #searchbtn
+  {
+    background-color:#52a8df;
+    border-radius: 5px;
+    color: whitesmoke;
+    width: auto;
+    height: 30px;
+  }
   .logo.first-child
   {
       flex: 2;
   }
-  #navbar
+  
+.navbar
   {
     margin: 0;
     padding: 0 25%;
     background-color:#333;
     border-radius: 5px;
-    overflow: auto;
+    overflow: hidden;
   }
   
   
-  .container {
+  .navbar-container {
       margin: 0;
       padding: 0 10%;
       max-width: 100%;
@@ -78,44 +92,41 @@
     }
    
     
-    #navbar a {
+    .navbar a {
       display: block;
       color: #fff;
-      text-decoration-style: none;
       padding: 10px 15px;
       font-size: large;
-      margin-top: 5px;
     }
     
-    #navbar ul {
+    .navbar ul {
       list-style: none;
       float: left;
     }
     
-    #navbar ul li {
+    .navbar ul li {
       float: left;
       color: #fff;
-      overflow: auto;
     }
     
-#navbar ul li a {
-    display: block;
-    margin-right: 15px ;
-    border-right: 1px solid black;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-}
-#navbar ul li:last-child a
-{
+    .navbar ul li a {
+      display: block;
+      margin-right: 15px ;
+      border-right: 1px solid black;
+      padding: 0 20px;
+      text-align: center;
+      text-decoration: none;
+    }
+    .navbar ul li:last-child a
+  {
     border-right: none;
-}
+  }
     
-#navbar ul li a:hover, 
-#navbar ul li a.current {
-    border-bottom: 3px solid aqua;
-}
-
+    .navbar ul li a:hover, 
+    .navbar ul li a.current {
+      border-bottom: 3px solid aqua;
+    }
+    
 .articles
 {
     padding: 0 20%;
@@ -134,7 +145,7 @@ h3
     float: inline-start;
     margin-top: 15px;
     margin-bottom: 40px;
-    color: white;
+    color: black;
 }
 a{
     text-decoration: none;
@@ -147,6 +158,7 @@ a{
     margin-left: 5px;
     margin-bottom: 5px;
     margin-right: 15px;
+    padding: 20px 0;
     width: 280px;
     height: auto;
 }
