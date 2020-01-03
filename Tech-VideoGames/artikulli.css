@@ -294,6 +294,11 @@ textarea{
     border-radius: 10px;
     line-height: 25px;
 }
+.foto{
+    display: block;
+    width: 100%; 
+    height: auto;
+}
 .bg-secondary {
     margin: 50px 0;
     background-color: #52a8df;
