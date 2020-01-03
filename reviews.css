@@ -104,7 +104,6 @@
 .navbar ul li a.current {
     border-bottom: 3px solid aqua;
 }
-    
 
 .articles
 {
@@ -169,3 +168,123 @@ a{
 
 .pagination a:not(.active){color: lightblue;}
 
+.footer{
+    background-color: #1c1c1c;
+    height: 400px;
+    position: relative;
+    padding: 0 10%;
+    }
+    .footer .footer-bottom{
+        text-align: left;
+        border-top: 1px solid #303030;
+        padding: 0 10%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 12px;
+        line-height: 40px;
+        color: #666666;
+    }
+    .footer .footer-content{
+        border-bottom: 1px solid #000000;
+        width: 100%;
+        display: flex;
+    }
+    .footer .footer-content .footer-section{
+        flex:1;
+        padding:0px 20px;
+    }
+    .footer .footer-content h4{
+        font-size: 12px;
+        line-height: 14px;
+        color: white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    .footer .footer-content p{
+        font-size: 12px;
+        line-height: 19px;
+        color: #666666;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    .footer .footer-section span {
+        font-size: 10px;
+        line-height: 12px;
+        color: #666666;
+        font-family: "Georgia";
+    }
+    .footer .footer-content .latest p{
+        display: block;
+        margin-bottom: 30px;
+        border-bottom: 1px #232323;
+        font-size: 12px;
+        line-height: 14px;
+        color: #666666;
+        font-family: "Georgia";
+    }
+    .footer .footer-content .latest br{
+        font-size: 10px;
+        line-height: 12px;
+        color: #666666;
+        font-family: "Georgia";
+    }
+    .footer .footer-content img{
+        float: left;
+        margin-right: 10px;
+    }
+    .footer .footer-content .links ul {
+        display: block;
+        padding: 0;
+    }
+    .footer .footer-content .links ul a{
+        border-bottom: 1px solid #232323;        
+        color:#2aa2d4;
+        text-decoration: none;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 12px;
+        line-height: 30px;
+    }
+    .footer .footer-content .links ul a:hover{
+        color:white;
+        list-style: none;
+        margin-left: 15px;
+        transition: all .3s;
+    }
+    .forma .hapesira{
+        border: 0px;
+        margin-bottom: 10px;
+        width: 225px;
+        height: 31px;
+        border-radius: 7px;
+        background-color: #232323;
+        font-size: 13px;
+        line-height: 21px;
+        color: #666666;
+        font-family: "Georgia";
+    }
+    input[type=submit]{
+        border: 0px;
+        font-size: 13px;
+        line-height: 21px;
+        color: #ffffff;
+        font-family: "Georgia";
+        width: 76px;
+        height: 31px;
+        border-radius: 7px;
+        background-color: #2aa2d4;
+    }
+    textarea{
+        border: 0px;
+        width: 225px;
+        height: 110px;
+        border-radius: 7px;
+        background-color: #232323;
+        font-size: 13px;
+        line-height: 21px;
+        color: #666666;
+        font-family: "Georgia";
+    }
+    .footer .footer-content .links ul li{
+        list-style: none;
+    }
+    .footer .footer-content .links ul li:before{
+        content: '\00BB';
+        color:#666666;
+    }
