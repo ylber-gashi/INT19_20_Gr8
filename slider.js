@@ -3,6 +3,9 @@
             sliderElement : $('.slider'),
             init : function(){
                 slider.sliderEvents();
+                 setInterval(function(){ 
+                  $('.arrow.next').trigger('click');
+                  }, 4000);
             },
             sliderEvents : function(){
                 $('.arrow.next').on('click',function(){
@@ -47,11 +50,6 @@
                     });
                 });
             },
-
-        nextSlide : function(){
-         },
-        prevSlide : function(){}
-        }
         $(document).ready(function(){
            slider.init();
           });
