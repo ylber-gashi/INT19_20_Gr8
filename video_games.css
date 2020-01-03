@@ -39,12 +39,10 @@
   /* logoja */ 
   #logo_place
   {
-      padding: 0 10%;
+      margin: 0 10%;
       height: 150px;
       display: flex;
-      flex-direction: row;
-      background-color: whitesmoke;
-  
+      flex-direction: row;  
   }
   
   .logo
@@ -55,8 +53,8 @@
   }
   #final_Logo
   {
-    height: 150px;
-    padding: 2px 20px;
+    height: 140px;
+    padding: 4px 20px;
   }
   #searchbtn
   {
