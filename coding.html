@@ -233,7 +233,6 @@
         .body{
             width: 70%;
             margin-left: 15%;
-            background-color: red;
             display: grid;
             grid-template-columns: 1fr 5fr;
             grid-gap: 2em;
@@ -272,7 +271,7 @@
             background-position: 0% 50%;
             }
         }
-        .section2 img{
+        img{
             border-radius: 10px;
         }
         table{
@@ -290,6 +289,9 @@
             border-top: 2px solid black;
             border-bottom: 2px solid black;
         }
+        canvas{
+            padding-left: 30%;
+        }
     </style>
     <script>
         var i = 0;
@@ -303,49 +305,79 @@
             }
             setTimeout("changeImg()", 2000);
         }
-        window.onload = changeImg;
+        function draw() {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            ctx.beginPath();
+            ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+            ctx.moveTo(110, 75);
+            ctx.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+            ctx.moveTo(65, 65);
+            ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+            ctx.moveTo(95, 65);
+            ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+            ctx.stroke();
+        }
+    }  
+    function load(){
+        draw();
+        changeImg();
+    }
+    window.onload = load; 
     </script>
 </head>
 <body>
     <header class="test">
-        <div id="first_bar">
-            <div id="elementet_img">
-                <a href="https://www.linkedin.com/" target="_blank"><img class="images"  src="fotot/linkedin.png"></a>
-                <a href="https://twitter.com/" target="_blank"><img class="images" src="fotot/twitter.png"></a>
-                <a href="https://www.pinterest.com/" target="_blank"><img class="images" src="fotot/pinterest.png"></a>
-                <a href="https://www.google.com/" target="_blank"><img class="images" src="fotot/googleplus.png"></a>
-                <a href="https://www.facebook.com/  " target="_blank"><img class="images" src="fotot/wifi.png"></a>
-
+        <header class="test">
+            <div id="first_bar">
+                <div id="elementet_img">
+                    <a href="https://www.linkedin.com/" target="_blank"><img class="images"  src="fotot/linkedin.png"></a>
+                    <a href="https://twitter.com/" target="_blank"><img class="images" src="fotot/twitter.png"></a>
+                    <a href="https://www.pinterest.com/" target="_blank"><img class="images" src="fotot/pinterest.png"></a>
+                    <a href="https://www.google.com/" target="_blank"><img class="images" src="fotot/googleplus.png"></a>
+                    <a href="https://www.facebook.com/  " target="_blank"><img class="images" src="fotot/wifi.png"></a>
+    
+                </div>
+                <ul>
+                    <li><a href="loginindex.html">Log In</a></li>
+                    <li><a href="loginindex.html">Sign Up</a></li>
+                </ul>
             </div>
-            <ul>
-                <li><a href="loginindex.html">Log In</a></li>
-                <li><a href="loginindex.html">Sign Up</a></li>
-            </ul>
-        </div>
-        <div id="logo_place">
-            <img id="final_Logo" class="logo" src="fotot/logoja.png" alt="">            
-                <div class="logo">
-                    <input type="text">
-                    <button id="searchbtn" type="submit">Search</button>
-                </div>
-             </div>
-        </div>
-            <nav class="navbar">
-                <div class="navbar-container">
-                    <ul>
-                    <li><a class="current" href="Home Page.html">Home</a></li>
-                    <li><a href="tech.html">Tech</a></li>
-                    <li><a href="video_games.html">Video Games</a></li>
-                    <li><a href="video_games.html">Reviews</a></li>
-                    <li><a href="video_games.html">Science</a></li>                  
-                    <li id="aboutUs"><a href="AboutUs.html">About Us</a></li>
-                    </ul>
-                </div>
-            </nav>
-    </header>
-    <div class="body">       
+            <div id="logo_place">
+                <a href="index.html"><img id="final_Logo" class="logo" src="fotot/LOGO1.png" alt=""></a>            
+                    <div class="logo">
+                        <input type="text">
+                        <button id="searchbtn" type="submit">Search</button>
+                    </div>
+                 </div>
+            </div>
+                <nav class="navbar">
+                    <div class="navbar-container">
+                        <ul>
+                        <li><a class="current" href="Home Page.html">Home</a></li>
+                        <li><a href="tech.html">Tech</a></li>
+                        <li><a href="video_games.html">Video Games</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="video_games.html">Coding</a></li>                  
+                        <li id="aboutUs"><a href="AboutUs.html">About Us</a></li>
+                        </ul>
+                    </div>
+                </nav>
+        </header>
+    
+    <div class="body">  
         <div class="teksti1">
             <h3>Challenge Nr. 1</h3>
+            <p>
+                Your challenge is to create this figure by using canvas element.
+            </p>
+        </div>
+        <canvas id="canvas"></canvas>
+         
+        <div class="teksti1">
+            <h3>Challenge Nr. 2</h3>
             <p>
                 Your challenge is to create this background animation
             </p>
@@ -356,14 +388,14 @@
             </div>
         </div>
         <div class="teksti1">
-            <h3>Challenge Nr.2</h3>
+            <h3>Challenge Nr.3</h3>
             <p>
                 Your challenge is to create a simple slider of photos using JS and arrays.
             </p>
         </div>
         <img  name="slideri" width="70%" height="200px">
         <div class="teksti1">
-            <h3>Challenge Nr.3</h3>
+            <h3>Challenge Nr.4</h3>
             <p>
                 Your challenge is to draw tic tac toe by using tables.
             </p>
@@ -385,6 +417,7 @@
               <td></td>
             </tr>
         </table>
+        
     </div>
    
     <footer class="footer">
@@ -443,6 +476,7 @@
         <div class="footer-bottom">
             &copy; Copyright Reserved 2013 @ domain name - all rights served 
         </div>
-    <footer>  
+    <footer>
+    
 </body>
 </html>
