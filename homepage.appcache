@@ -1,0 +1,13 @@
+CACHE MANIFEST
+#DATE 2020-01-04
+CACHE:
+index.html
+home.css
+tech.html
+video_games.html
+reviews.html
+
+NETWORK:
+*
+
+FALLBACK:
