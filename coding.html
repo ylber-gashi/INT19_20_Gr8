@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding:0;
+        }
+       #first_bar{
+            margin: 0;
+            padding: 0 10%;
+            height: 40px;
+            top: 1;
+            position: sticky;
+            background-color:#52a8df;
+            overflow-wrap :auto;
+            display: flex;
+            justify-content: space-between; 
+        }
+        #first_bar ul {
+            display: flex;
+            list-style: none;   
+            align-items: center; 
+        }
+        #first_bar ul a{
+            padding: 0.75rem;
+            color: white;
+            text-decoration: none;
+        }
+        .images{
+            margin-top: 5px;
+            margin-left:8px;
+        }
+
+        /* logoja */ 
+        #logo_place
+        {
+            margin: 0 10%;
+            height: 150px;
+            display: flex;
+            flex-direction: row;
+        }
+        .logo{
+            padding: 4rem;
+            text-align: center;
+            flex: 1;
+        }
+        #final_Logo
+        {
+        height: 140px;
+        padding: 4px 20px;
+        }
+        #searchbtn{
+            background-color:#52a8df;
+            border-radius: 5px;
+            color: whitesmoke;
+            width: auto;
+            height: 30px;
+        }
+        .logo.first-child{
+            flex: 2;
+        }
+        .navbar {
+            background-color:#333;
+            width:100%;
+            overflow: hidden;
+        }
+        .navbar-container {
+            margin: 0;
+            margin-left: 15%;
+            padding: 0 10%;
+            width:80%;
+            max-width: 100%;
+            overflow: 0;
+            column-gap: 10px;
+            column-rule: 50px outset #333;
+            -moz-column-gap: 5px;
+        }
+        .navbar a {
+            display: block;
+            color: #fff;
+            padding: 10px 15px;
+            font-size: large;
+        } 
+        .navbar ul {
+            list-style: none;
+            float: left;
+        }
+        .navbar ul li {
+            float: left;
+            color: #fff;
+        }   
+        .navbar ul li a{
+            display: block;
+            margin-right: 15px ;
+            border-right: 1px solid black;
+            padding: 0 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .navbar ul li:last-child a{
+            border-right: none;
+        }
+
+        .navbar ul li a:hover, 
+        .navbar ul li a.current {
+            border-bottom: 3px solid aqua;
+        }
+        .footer{
+        background-color: #1c1c1c;
+        height: 400px;
+        position: relative;
+        padding: 0 10%;
+        }
+        .footer .footer-bottom{
+            text-align: left;
+            border-top: 1px solid #303030;
+            padding: 0 10%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 12px;
+            line-height: 40px;
+            color: #666666;
+        }
+        .footer .footer-content{
+            border-bottom: 1px solid #000000;
+            height: 350px;
+            display: flex;
+        }
+        .footer .footer-content .footer-section{
+            flex:1;
+            padding:0px 20px 20px 20px;
+        }
+        .footer .footer-content h4{
+            font-size: 12px;
+            line-height: 14px;
+            color: white;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        .footer .footer-content p{
+            font-size: 12px;
+            line-height: 19px;
+            color: #666666;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        .footer .footer-section span {
+            font-size: 10px;
+            line-height: 12px;
+            color: #666666;
+            font-family: "Georgia";
+        }
+        .footer .footer-content .latest p{
+            display: block;
+            margin-bottom: 30px;
+            border-bottom: 1px #232323;
+            font-size: 12px;
+            line-height: 14px;
+            color: #666666;
+            font-family: "Georgia";
+        }
+        .footer .footer-content .latest br{
+            font-size: 10px;
+            line-height: 12px;
+            color: #666666;
+            font-family: "Georgia";
+        }
+        .footer .footer-content img{
+            float: left;
+            margin-right: 10px;
+        }
+        .footer .footer-content .links ul {
+            display: block;
+            padding: 0;
+        }
+        .footer .footer-content .links ul a{
+            border-bottom: 1px solid #232323;        
+            color:#2aa2d4;
+            text-decoration: none;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 12px;
+            line-height: 30px;
+        }
+        .footer .footer-content .links ul a:hover{
+            color:white;
+            list-style: none;
+            margin-left: 15px;
+            transition: all .3s;
+        }
+        .forma .hapesira{
+            border: 0px;
+            margin-bottom: 10px;
+            width: 225px;
+            height: 31px;
+            border-radius: 7px;
+            background-color: #232323;
+            font-size: 13px;
+            line-height: 21px;
+            color: #666666;
+            font-family: "Georgia";
+        }
+        input[type=submit]{
+            border: 0px;
+            font-size: 13px;
+            line-height: 21px;
+            color: #ffffff;
+            font-family: "Georgia";
+            width: 76px;
+            height: 31px;
+            border-radius: 7px;
+            background-color: #2aa2d4;
+        }
+        textarea{
+            border: 0px;
+            width: 225px;
+            height: 110px;
+            border-radius: 7px;
+            background-color: #232323;
+            font-size: 13px;
+            line-height: 21px;
+            color: #666666;
+            font-family: "Georgia";
+        }
+        .footer .footer-content .links ul li{
+            list-style: none;
+        }
+        .footer .footer-content .links ul li:before{
+            content: '\00BB';
+            color:#666666;
+        }
+        .body{
+            width: 70%;
+            margin-left: 15%;
+            background-color: red;
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            grid-gap: 2em;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-left: 8%;
+        }
+        .teksti1{
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #E5E7E9;
+        }
+        .gradienti{
+            width: 70%;
+            height: 200px;
+            background-image: linear-gradient(125deg,#2c3e50,#27ae60,#2980b9,#e74c3c,#8e44ad);
+            background-size: 200% 200%;
+            animation: bganimation 15s infinite;
+            border-radius: 10px;
+        }
+        .text{
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            padding-top: 80px;
+            font-size: 22px;
+        }
+        @keyframes bganimation {
+        0%{
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+        100%{
+            background-position: 0% 50%;
+            }
+        }
+        .section2 img{
+            border-radius: 10px;
+        }
+        table{
+            width: 70%;
+        }
+        td {
+            width: 50px;
+            height: 50px;
+        }
+        .vert {
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+        }
+        .hori {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+    </style>
+    <script>
+        var i = 0;
+        var images =['fotot2/fotoja1.png','fotot2/fotoja2.png','fotot2/fotoja3.png','fotot2/fotoja4.png'];
+        function changeImg(){
+            document.slideri.src = images[i];
+            if(i<images.length-1){
+                i++;
+            }else {
+                i=0;
+            }
+            setTimeout("changeImg()", 2000);
+        }
+        window.onload = changeImg;
+    </script>
+</head>
+<body>
+    <header class="test">
+        <div id="first_bar">
+            <div id="elementet_img">
+                <a href="https://www.linkedin.com/" target="_blank"><img class="images"  src="fotot/linkedin.png"></a>
+                <a href="https://twitter.com/" target="_blank"><img class="images" src="fotot/twitter.png"></a>
+                <a href="https://www.pinterest.com/" target="_blank"><img class="images" src="fotot/pinterest.png"></a>
+                <a href="https://www.google.com/" target="_blank"><img class="images" src="fotot/googleplus.png"></a>
+                <a href="https://www.facebook.com/  " target="_blank"><img class="images" src="fotot/wifi.png"></a>
+
+            </div>
+            <ul>
+                <li><a href="loginindex.html">Log In</a></li>
+                <li><a href="loginindex.html">Sign Up</a></li>
+            </ul>
+        </div>
+        <div id="logo_place">
+            <img id="final_Logo" class="logo" src="fotot/logoja.png" alt="">            
+                <div class="logo">
+                    <input type="text">
+                    <button id="searchbtn" type="submit">Search</button>
+                </div>
+             </div>
+        </div>
+            <nav class="navbar">
+                <div class="navbar-container">
+                    <ul>
+                    <li><a class="current" href="Home Page.html">Home</a></li>
+                    <li><a href="tech.html">Tech</a></li>
+                    <li><a href="video_games.html">Video Games</a></li>
+                    <li><a href="video_games.html">Reviews</a></li>
+                    <li><a href="video_games.html">Science</a></li>                  
+                    <li id="aboutUs"><a href="AboutUs.html">About Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+    </header>
+    <div class="body">       
+        <div class="teksti1">
+            <h3>Challenge Nr. 1</h3>
+            <p>
+                Your challenge is to create this background animation
+            </p>
+        </div>
+        <div class="gradienti">
+            <div class="text">
+                 Gradient Background Animation
+            </div>
+        </div>
+        <div class="teksti1">
+            <h3>Challenge Nr.2</h3>
+            <p>
+                Your challenge is to create a simple slider of photos using JS and arrays.
+            </p>
+        </div>
+        <img  name="slideri" width="70%" height="200px">
+        <div class="teksti1">
+            <h3>Challenge Nr.3</h3>
+            <p>
+                Your challenge is to draw tic tac toe by using tables.
+            </p>
+        </div>
+        <table>
+            <tr>
+              <td></td>
+              <td class="vert"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="hori"></td>
+              <td class="vert hori"></td>
+              <td class="hori"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="vert"></td>
+              <td></td>
+            </tr>
+        </table>
+    </div>
+   
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section company">
+                <h4>Company Details</h4>
+                <p>Brain Byte eshte nje portal ku mund t'i gjeni te rejat me te fundit ne boten e teknologjise. 
+                    Po ashtu mund te gjeni gjera intereante edhe tek sektori i video lojerave dhe shkences.</p>
+                <div class="contact">
+                    <p>Brain Byte<br>Bregu i Diellit<br>Prishtine<br>10000<br></p>
+                    <p>Phone: 4165485861<br>Email: info@brainbyte.com</p>
+                
+                </div>
+            
+            </div>
+            <div class="footer-section latest">
+                <h4>Latest Blogposts</h4>
+                <div >
+                    <a href="Tech-VideoGames/dellxps.html">
+                    <img src="Tech-VideoGames/images/dell1.jpg" height="48px" width="48px">
+                    <p>Dell Xps 13 - Review <br> </a><span> 20 February 2020</span></p>
+                </div> 
+                <div>
+                    <a href="Tech-VideoGames/surface.html">
+                    <img src="Tech-VideoGames/images/2.jpg" height="48px" width="48px">
+                    <p>Microsoft Surface Laptop 3 13.5-inch<br></a><span> 20 February 2020</span></p>
+                </div>
+                <div>
+                    <a href="Tech-VideoGames/galaxyS10.html">
+                    <img src="Tech-VideoGames/images/3.jpg" height="48px" width="48px">
+                    <p>Samsung Galaxy S10 Lite - specs, prices<br></a><span> 20 February 2020</span></p>
+                </div>
+            </div>
+             
+            <div class="footer-section links">
+                <h4> Quick links</h4>           
+                <ul class="list">
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Location</a></li>
+                </ul></div>
+            
+        <div class="footer-section contact">
+            <h4>Contact Us</h4>
+            <form class="forma" id="forma">
+                <input type="name" class="hapesira" placeholder="Name">
+                <input type="email" class="hapesira" placeholder="Email">
+                <textarea type="message" placeholder="Message"></textarea> <br>
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </form>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; Copyright Reserved 2013 @ domain name - all rights served 
+        </div>
+    <footer>  
+</body>
+</html>
