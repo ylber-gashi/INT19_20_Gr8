@@ -13,7 +13,6 @@
         }
         body{
             font-family: 'Montserrat', sans-serif;
-            background:#f6f5f7;
             color:#2aa2d4;
             display: flex;
             flex-direction: column;
@@ -195,7 +194,7 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form action="#" name="signupform" onsubmit="return ValidateSignUp()">
                 <h1>Create Account</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -203,14 +202,14 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registration</span>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <button>Sign Up</button>
+                <input type="text" placeholder="Name" name="signupname"/>
+                <input type="text" placeholder="Email" id="signupemail" />
+                <input type="password" placeholder="Password" name="signuppassword"/>
+                <button type="submit" value="SignupSubmit">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="#" name="loginform" onsubmit="return ValidateSignIn()">
                 <h1>Sign in</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -218,10 +217,10 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your account</span>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input type="text" placeholder="Email" name="loginemail"/>
+                <input type="password" placeholder="Password" name="loginpassword" />
                 <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
+                <button type="submit" value="LoginSubmit">Sign In</button>
             </form>
         </div>
         <div class="overlay-container">
@@ -247,6 +246,40 @@
         container.classList.add('right-panel-active'));
         signInButton.addEventListener('click', () =>
         container.classList.remove('right-panel-active'));
+
+        function ValidateSignUp(){
+            var name = document.forms["signupform"]["signupname"].value;
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            var signupemail = document.forms["signupform"]["signupemail"].value;
+            var atpos = signupemail.indexOf("@");
+            var dotpos = signupemail.lastIndexOf(".");
+            if(signupemail=="" || atpos<1 || dotpos < (atpos+2) || (dotpos+2)>signupemail.length){
+                alert("Please enter the right format of email");
+                return false;
+            }
+            var signuppassword = document.forms["signupform"]["signuppassword"].value;
+            if(signuppassword.length<6){
+                alert("Password length must be greater than or equal to 6 charcters");
+                return false;
+            }
+        }
+        function ValidateSignIn(){
+            var loginemail = document.forms["loginform"]["loginemail"].value;
+            var atpos = loginemail.indexOf("@");
+            var dotpos = loginemail.lastIndexOf(".");
+            if(loginemail=="" || atpos<1 || dotpos < (atpos+2) || (dotpos+2)>loginemail.length){
+                alert("Please enter the right format of email");
+                return false;
+            }
+            var loginpassword = document.forms["loginform"]["loginpassword"].value;
+            if(loginpassword.length<6){
+                alert("Password length must be greater than or equal to 6 charcters");
+                return false;
+            }
+        }
     </script>
 </body>
 </html>
