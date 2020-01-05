@@ -117,7 +117,7 @@
         }
         .sign-up-container{
             left:0;
-            width:50%;
+            width:100%;
             /*opacity e percakton sa transparent eshte qaj element*/
             opacity: 0;
             z-index: 1px;
@@ -126,7 +126,7 @@
             position:absolute;
             top: 0;
             right:0;
-            width:50%;
+            width:100%;
             height: 100%;
             overflow: hidden;
             transition: transform 0.6s ease-in-out;
@@ -193,102 +193,20 @@
 </head>
 <body>
     <div class="container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="#" name="signupform" onsubmit="return signUp()">
-                <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email for registration</span>
-                <input type="text" placeholder="Name" name="signupname"/>
-                <input type="text" placeholder="Email" id="signupemail" />
-                <input type="password" placeholder="Password" name="signuppassword"/>
-                <button type="submit" value="SignupSubmit">Sign Up</button>
-            </form>
-        </div>
-        <div class="form-container sign-in-container">
-            <form action="#" name="loginform" onsubmit="return signIn()">
-                <h1>Sign in</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your account</span>
-                <input type="text" placeholder="Email" name="loginemail"/>
-                <input type="password" placeholder="Password" name="loginpassword" />
-                <a href="#">Forgot your password?</a>
-                <button type="submit" value="LoginSubmit">Sign In</button>
-            </form>
-        </div>
         <div class="overlay-container">
             <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button class="buttons" id="signIn">Sign In</button>
-                </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button class="buttons" id="signUp">Sign Up</button>
+                    <h1>Goodbye, Friend!</h1>
+                    <p>We are signing you out</p>
                 </div>
             </div>
         </div>
     </div>
     <script>
-        const signUpButton = document.getElementById('signUp');
-        const signInButton = document.getElementById('signIn');
-        const container = document.getElementById('container');
-        signUpButton.addEventListener('click', () =>
-        container.classList.add('right-panel-active'));
-        signInButton.addEventListener('click', () =>
-        container.classList.remove('right-panel-active'));
-
-        function signIn() {
-            var loginemail = document.forms["loginform"]["loginemail"].value;
-            var atpos = loginemail.indexOf("@");
-            var dotpos = loginemail.lastIndexOf(".");
-            if (loginemail=="" || atpos<1 || dotpos < (atpos+2) || (dotpos+2)>loginemail.length){
-                alert("Please enter the right format of email");
-                return false;
-            }
-            var loginpassword = document.forms["loginform"]["loginpassword"].value;
-            if (loginpassword.length<6){
-                alert("Password length must be greater than or equal to 6 charcters");
-                return false;
-            }
-
-            sessionStorage.setItem('email', loginemail);
+        (function() {            
+            sessionStorage.removeItem('email');
             window.location.href = 'index.html';
-            return false;
-        }
-
-        function signUp() {
-            var name = document.forms["signupform"]["signupname"].value;
-            if (name == "") {
-                alert("Name must be filled out");
-                return false;
-            }
-            var signupemail = document.forms["signupform"]["signupemail"].value;
-            var atpos = signupemail.indexOf("@");
-            var dotpos = signupemail.lastIndexOf(".");
-            if(signupemail=="" || atpos<1 || dotpos < (atpos+2) || (dotpos+2)>signupemail.length){
-                alert("Please enter the right format of email");
-                return false;
-            }
-            var signuppassword = document.forms["signupform"]["signuppassword"].value;
-            if(signuppassword.length<6){
-                alert("Password length must be greater than or equal to 6 charcters");
-                return false;
-            }
-
-            sessionStorage.setItem('email', signupemail);
-            window.location.href = 'index.html';
-            return false;
-        }
+        })();
     </script>
 </body>
 </html>
