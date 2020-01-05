@@ -152,10 +152,12 @@ a{
 .pagination
 {
     padding: 0 40%;
+    margin-top: 20px ;
+    margin-bottom: 70px;
 }
 .pagination a
 {
-    color: red;
+    color:black;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
@@ -163,11 +165,11 @@ a{
 }
 .pagination a.active
 {
-    background-color: violet;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
-.pagination a:not(.active){background-color: green;}
+.pagination a:not(.active){background-color: lightblue;}
 
 .footer{
     background-color: #1c1c1c;
