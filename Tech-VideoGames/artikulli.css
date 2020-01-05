@@ -244,6 +244,9 @@ textarea{
     grid-column-gap: 15px;
         
 }
+audio{
+    margin-top: 10px;
+}
 .artikulli{ 
     background-color: #ffffff;
     padding: 0px 50px;
