@@ -31,8 +31,8 @@ body{
     background:rgb(255, 255, 255) ;
     border-radius: 8px;
     border: 1px solid #e2e2e2;
-    margin: 3rem auto;
-    width: 60%;
+    margin: 3rem;
+    width: 120%;
 }
 
 .comment-container-title
@@ -76,7 +76,7 @@ body{
 
 .comment-body
 {
-    color: #4a5568;
+    color:whitesmoke;
     line-height: 1.4;
     margin: 0;
     padding-right: 1rem;
