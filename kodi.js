@@ -3,7 +3,7 @@
  if (t>5 && t <= 10 ) {
       document.body.style.backgroundColor="yellow";
  }else if (t>10 && t <= 20) {
-      document.body.style.backgroundColor="orange";
+      document.body.style.backgroundColor="white";
  }else {
       document.body.style.backgroundColor="grey";
  }
